@@ -5,11 +5,14 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+import HeroImg from "/public/hero-img.webp";
+import Image from "next/image";
+
 const Hero = () => {
   return (
-    <section className="flex flex-col lg:flex-row gap-y-10 py-6 ">
+    <section className="flex flex-col lg:flex-row gap-y-10 py-6 mx-8 ">
       {/* Left Div */}
-      <div className="flex-1">
+      <div className="flex-1 ">
         <Badge className="py-2 px-6 text-lg rounded-lg bg-blue-200 text-blue-700 ">
           Sale 70%
         </Badge>
@@ -24,7 +27,9 @@ const Hero = () => {
       </div>
 
       {/* Right Div */}
-      <div className="flex-1">{/* <Image src={heroImage} alt='hero' /> */}</div>
+      <div className="flex-1 ">
+        <Image src={HeroImg} alt="hero" className="object-cover" />
+      </div>
     </section>
   );
 };
