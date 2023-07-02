@@ -3,6 +3,9 @@ import logo from "/public/logo.png"; //direct use of public
 import Image from "next/image";
 import Link from "next/link";
 
+import { ShoppingCart } from "lucide-react";
+import { Input } from "../ui/input";
+
 const Header = () => {
   return (
     <div className="flex justify-between items-center  py-6 px-8">
@@ -25,8 +28,14 @@ const Header = () => {
         </li>
       </ul>
 
-      <div className="h-10 w-10 bg-gray-200 rounded-full ">
+      <div>
+        {/* <input type="text" placeholder="Search Products"/> */}
+        <Input placeholder="Search Products" className="w-72"/>
+      </div>
+
+      <div className="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center">
         {/* serch icon */}
+        <ShoppingCart className="" />
       </div>
     </div>
   );
