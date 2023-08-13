@@ -66,19 +66,20 @@ const Footer = () => {
             <div className="">
               Design by:{" "}
               <Link
-                href={"https://www.mkdev.live/"}
+                href={"https://www.hassanshan.netlify.app/"}
+                target='_blank'
                 className="font-bold text-black"
               >
-                M. Khubaib
+                H. Shan
               </Link>
             </div>
             <div className="">
               Code by:{" "}
               <Link
-                href={"https://github.com/mkdeveloper"}
+                href={"https://github.com/HassanShanJava"}
                 className="font-bold text-black"
               >
-                mkdeveloper on Github
+                HassanShanJava on Github
               </Link>
             </div>
           </div>

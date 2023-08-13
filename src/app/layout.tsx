@@ -12,21 +12,15 @@ export const metadata = {
   description: "Ecommerce shopping App",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: any }) {
   const { userId } = auth();
   return (
     <ClerkProvider>
       <Providers>
         <html lang="en">
-          <body className={sora.className}>
-            <Navbar userId={userId as string} />
-            {children}
-            <Footer />
-          </body>
+          <Navbar userId={userId as string} />
+          <main className={sora.className}>{children}</main>
+          <Footer />
         </html>
       </Providers>
     </ClerkProvider>
