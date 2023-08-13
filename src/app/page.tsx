@@ -1,15 +1,13 @@
-import Image from "next/image";
-import Header from "@/components/layout/Header";
-import Hero from "@/views/Hero";
-import ProductList from "@/views/ProductList";
+import { Products, Promotion, Hero, Unique, Newsletter } from "@/components/sections";
 
 export default function Home() {
   return (
-    <>
-      <div>
-        <Hero />
-        <ProductList/>
-      </div>
-    </>
+    <main>
+      <Hero />
+      <Promotion />
+      <Products />
+      <Unique />
+      <Newsletter />
+    </main>
   );
 }

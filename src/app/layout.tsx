@@ -1,27 +1,34 @@
+import { Navbar, Footer } from "@/components/sections";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Sora } from "next/font/google";
+import Providers from "@/components/utils/Providers";
 
-const inter = Inter({ subsets: ["latin"] });
+import { ClerkProvider, auth } from "@clerk/nextjs";
 
-// title for all pages
+const sora = Sora({ subsets: ["latin"], style: "normal" });
+
 export const metadata = {
   title: "Dine Market",
-  description: "Dine Market",
+  description: "Ecommerce shopping App",
 };
-
-import Header from "@/components/layout/Header";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { userId } = auth();
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main className="px-8">{children}</main>
-      </body>
-    </html>
+    <ClerkProvider>
+      <Providers>
+        <html lang="en">
+          <body className={sora.className}>
+            <Navbar userId={userId as string} />
+            {children}
+            <Footer />
+          </body>
+        </html>
+      </Providers>
+    </ClerkProvider>
   );
 }
