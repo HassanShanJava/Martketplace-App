@@ -1,4 +1,4 @@
-## HACKATHONE ONE
+## HACKATHON ONE
 
 For Live site preview, [click here](https://ecom-marketplace.vercel.app/)
 
