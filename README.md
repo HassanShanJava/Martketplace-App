@@ -1,6 +1,6 @@
 ## HACKATHONE ONE
 
-For Live site preview, [click here](https://hackathon-ecom.vercel.app/)
+For Live site preview, [click here](https://ecom-marketplace.vercel.app/)
 
 **I have used**
 
